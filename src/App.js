@@ -3,10 +3,10 @@ import { BrowserRouter } from "react-router-dom";
 import { ref, set, getDatabase, onValue} from 'firebase/database'
 import Router from "./router/Router";
 import db from './Firebase.js'
-import "./sass/base.scss"
 import "./sass/app.scss"
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
+import AccountIcon from "./components/AccountIcon";
 function App() {
   //kiem tra dang nhap
   const [checkLogin,setCheckLogin] = useState(false)
@@ -21,6 +21,9 @@ function App() {
             }
             {
               checkLogin&&<Navbar />
+            }
+            {
+              checkLogin&&<AccountIcon handleLogin={handleLogin}/>
             }
             {
               checkLogin&&<Router />

@@ -1,8 +1,234 @@
 import React from 'react'
-
+import '../sass/home.scss'
+import down from '../assets/down.png'
+import elip1 from '../assets/elip1.png'
+import elip3 from '../assets/elip3.png'
+import elip2 from '../assets/elip2.png'
+import img from '../assets/image.png'
+import play from '../assets/play.png'
 function Home() {
   return (
-    <div className='home'>Home</div>
+    <div className='home'>
+      <div className='home__container'>
+        <h1 className='title'>
+          Trang chủ
+        </h1>
+        <div className='home__group'>
+          <div className='home__school-year'>
+            <span>Niên khóa</span>
+            <div className='home__select'>
+              <img src={down}></img>
+              <select >
+                <option value='1'>2020-2021</option>
+                <option value='2'>2020-2021</option>
+                <option value='3'>2020-2021</option>
+                <option value='4'>2020-2021</option>
+              </select>
+            </div>
+          </div>
+          <div className='home__information'>
+            <div className='home__information-box'>
+              <img src={elip1}></img>
+              <img src={elip2}></img>
+              <img src={elip3}></img>
+              <div className='home__information-group'>
+                <h1>12</h1>
+                <span>Môn học</span>
+              </div>
+            </div>
+            <div className='home__information-box'>
+              <img src={elip1}></img>
+              <img src={elip3}></img>
+              <div className='home__information-group'>
+                <h1>33</h1>
+                <span>Giảng viên</span>
+              </div>
+            </div>
+            <div className='home__information-box'>
+              <img src={elip1}></img>
+              <img src={elip3}></img>
+              <div className='home__information-group'>
+                <h1>13</h1>
+                <span>Tệp riêng tư</span>
+              </div>
+            </div>
+            <div className='home__information-box'>
+              <img src={elip1}></img>
+              <img src={elip2}></img>
+              <img src={elip3}></img>
+              <div className='home__information-group'>
+                <h1>132</h1>
+                <span>Đề thi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='home__recently'>
+          <div className='home__recently-control'>
+            <h4>Tài liệu môn học đã xem gần đây</h4>
+          </div>
+          <div className='home__recently-list'>
+            <div className='home__recently-item'>
+              <div className='home__recently-img'>
+                <img src={img}></img>
+                <img src={play}></img>
+              </div>
+              <div className='home__recently-info'>
+                <div className='home__recently-head'>
+                  <h3>Phát triển Website</h3>
+                  <span>Web Design</span>
+                </div>
+                <div className='home__recently-bot'>
+                  <h3>WEB23</h3>
+                  <span>Giảng viên: Hoa Hoa</span>
+                </div>
+              </div>
+            </div>
+            <div className='home__recently-item'>
+              <div className='home__recently-img'>
+                <img src={img}></img>
+                <img src={play}></img>
+              </div>
+              <div className='home__recently-info'>
+                <div className='home__recently-head'>
+                  <h3>Phát triển Website</h3>
+                  <span>Web Design</span>
+                </div>
+                <div className='home__recently-bot'>
+                  <h3>WEB23</h3>
+                  <span>Giảng viên: Hoa Hoa</span>
+                </div>
+              </div>
+            </div>
+            <div className='home__recently-item'>
+              <div className='home__recently-img'>
+                <img src={img}></img>
+                <img src={play}></img>
+              </div>
+              <div className='home__recently-info'>
+                <div className='home__recently-head'>
+                  <h3>Phát triển Website</h3>
+                  <span>Web Design</span>
+                </div>
+                <div className='home__recently-bot'>
+                  <h3>WEB23</h3>
+                  <span>Giảng viên: Hoa Hoa</span>
+                </div>
+              </div>
+            </div>
+            <div className='home__recently-item'>
+              <div className='home__recently-img'>
+                <img src={img}></img>
+                <img src={play}></img>
+              </div>
+              <div className='home__recently-info'>
+                <div className='home__recently-head'>
+                  <h3>Phát triển Website</h3>
+                  <span>Web Design</span>
+                </div>
+                <div className='home__recently-bot'>
+                  <h3>WEB23</h3>
+                  <span>Giảng viên: Hoa Hoa</span>
+                </div>
+              </div>
+            </div>
+            <div className='home__recently-item'>
+              <div className='home__recently-img'>
+                <img src={img}></img>
+                <img src={play}></img>
+              </div>
+              <div className='home__recently-info'>
+                <div className='home__recently-head'>
+                  <h3>Phát triển Website</h3>
+                  <span>Web Design</span>
+                </div>
+                <div className='home__recently-bot'>
+                  <h3>WEB23</h3>
+                  <span>Giảng viên: Hoa Hoa</span>
+                </div>
+              </div>
+            </div>
+            <div className='home__recently-item'>
+              <div className='home__recently-img'>
+                <img src={img}></img>
+                <img src={play}></img>
+              </div>
+              <div className='home__recently-info'>
+                <div className='home__recently-head'>
+                  <h3>Phát triển Website</h3>
+                  <span>Web Design</span>
+                </div>
+                <div className='home__recently-bot'>
+                  <h3>WEB23</h3>
+                  <span>Giảng viên: Hoa Hoa</span>
+                </div>
+              </div>
+            </div>
+            <div className='home__recently-item'>
+              <div className='home__recently-img'>
+                <img src={img}></img>
+                <img src={play}></img>
+              </div>
+              <div className='home__recently-info'>
+                <div className='home__recently-head'>
+                  <h3>Phát triển Website</h3>
+                  <span>Web Design</span>
+                </div>
+                <div className='home__recently-bot'>
+                  <h3>WEB23</h3>
+                  <span>Giảng viên: Hoa Hoa</span>
+                </div>
+              </div>
+            </div>
+            <div className='home__recently-item'>
+              <div className='home__recently-img'>
+                <img src={img}></img>
+                <img src={play}></img>
+              </div>
+              <div className='home__recently-info'>
+                <div className='home__recently-head'>
+                  <h3>Phát triển Website</h3>
+                  <span>Web Design</span>
+                </div>
+                <div className='home__recently-bot'>
+                  <h3>WEB23</h3>
+                  <span>Giảng viên: Hoa Hoa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='home__statis'>
+          <div className='home__statis-box'>
+            <div className='home__statis-head'>
+              <h3>Thống kê truy cập</h3>
+            </div>
+            <div className='home__statis-bot'>
+              <div className='home__statis-bot--group'>
+                <span>Đang truy cập:</span>
+                <span>31</span>
+              </div>
+              <div className='home__statis-bot--group'>
+                <span>Lượt truy cập hôm nay:</span>
+                <span>97</span>
+              </div>
+              <div className='home__statis-bot--group'>
+                <span>Lượt truy cập tuần này:</span>
+                <span>1,298</span>
+              </div>
+              <div className='home__statis-bot--group'>
+                <span>Lượt truy cập tháng này:</span>
+                <span>31</span>
+              </div>
+              <div className='home__statis-bot--group'>
+                <span>Tổng lượt truy cập:</span>
+                <span>31</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
