@@ -231,6 +231,7 @@
         }
     }
     &__statis{
+        display: flex;
         &-box{
             width: 380px;
             height: 288px;
@@ -238,6 +239,7 @@
             box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
             border-radius: 16px;
             padding:8px;
+            margin-right: 38px;
         }
         &-head{
             margin-left: 30px;
@@ -262,6 +264,77 @@
                 & span:last-child{
                     color: #CC5C00;
                 }
+            }
+        }
+    }
+    &__file{
+        width: 100%;
+        margin-bottom: 40px;
+        &-control{
+            & h4{
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.015em;
+                color: #CC5C00;
+            }
+        }
+        &-list{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin:0 -10px;
+        }
+        &-item{
+            position: relative;
+            background-color: red;
+            width: 380px;
+            height: 132px;
+            padding:16px;
+            background: #FFFFFF;
+            box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            margin:12px 10px;
+
+        }
+        &-img{
+            margin-right: 16px;
+            position: relative;
+            cursor: pointer;
+        }
+        &-head{
+            & h3{
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.015em;
+                color: #373839;
+            }
+        }
+        &-bot{
+            & h3{
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.015em;
+                color: #CC5C00;
+            }
+        }
+        &-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & h3{
+                margin:0;
+            }
+            & span{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 130%;
+                color: #373839;
             }
         }
     }

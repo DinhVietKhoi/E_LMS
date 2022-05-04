@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 function AccountIcon({handleLogin}) {
   return (
     <div className='accountIcon'>
-        <div className='accountIcon__group'>
+        <Link to="/account" className='accountIcon__group'>
             <img src={user}></img>
-            <span>Admin</span>
-        </div>
+            <span >Admin</span>
+        </Link>
         <div className='accountIcon__ruler'>
 
         </div>

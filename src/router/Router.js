@@ -7,6 +7,7 @@ import ExamQuestions from '../pages/ExamQuestions'
 import Notification from '../pages/Notification'
 import Settings from '../pages/Settings'
 import Help from '../pages/Help'
+import Account from '../pages/Account'
 function Router() {
     //npm install react-router-dom@6
 
@@ -19,6 +20,7 @@ function Router() {
             <Route path="/notification" element={<Notification />}></Route>
             <Route path="/settings" element={<Settings />}></Route>
             <Route path="/help" element={<Help />}></Route>
+            <Route path="/account" element={<Account />}></Route>
         </Routes>
     )
 }

@@ -5,6 +5,9 @@ import elip1 from '../assets/elip1.png'
 import elip3 from '../assets/elip3.png'
 import elip2 from '../assets/elip2.png'
 import img from '../assets/image.png'
+import img1 from '../assets/img1.png'
+import img2 from '../assets/img2.png'
+import img3 from '../assets/img3.png'
 import play from '../assets/play.png'
 function Home() {
   return (
@@ -223,6 +226,58 @@ function Home() {
               <div className='home__statis-bot--group'>
                 <span>Tổng lượt truy cập:</span>
                 <span>31</span>
+              </div>
+            </div>
+          </div>
+          <div className='home__file'>
+            <div className='home__file-control'>
+              <h4>Tệp riêng tư tải lên gần đây</h4>
+            </div>
+            <div className='home__file-list'>
+              <div className='home__file-item'>
+                <div className='home__file-img'>
+                  <img src={img1}></img>
+                </div>
+                <div className='home__file-info'>
+                  <div className='home__file-head'>
+                    <h3>Thương mại điện tử là gì.docx</h3>
+                    <span>12:01 12/12/2020</span>
+                  </div>
+                  <div className='home__file-bot'>
+                    <h3>Thương mại điện tử</h3>
+                    <span>Giảng viên: Hoa Hoa</span>
+                  </div>
+                </div>
+              </div>
+              <div className='home__file-item'>
+                <div className='home__file-img'>
+                  <img src={img2}></img>
+                </div>
+                <div className='home__file-info'>
+                  <div className='home__file-head'>
+                    <h3>Thương mại điện tử là gì.docx</h3>
+                    <span>12:01 12/12/2020</span>
+                  </div>
+                  <div className='home__file-bot'>
+                    <h3>Thương mại điện tử</h3>
+                    <span>Giảng viên: Hoa Hoa</span>
+                  </div>
+                </div>
+              </div>
+              <div className='home__file-item'>
+                <div className='home__file-img'>
+                  <img src={img3}></img>
+                </div>
+                <div className='home__file-info'>
+                  <div className='home__file-head'>
+                    <h3>Thương mại điện tử là gì.docx</h3>
+                    <span>12:01 12/12/2020</span>
+                  </div>
+                  <div className='home__file-bot'>
+                    <h3>Thương mại điện tử</h3>
+                    <span>Giảng viên: Hoa Hoa</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
