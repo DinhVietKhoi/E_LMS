@@ -23,7 +23,7 @@ import book2 from '../assets/book2.png'
 import comment2 from '../assets/comment2.png'
 import logo_mini from '../assets/Logo_mini.png'
 import { Link, NavLink } from 'react-router-dom'
-function Navbar() {
+function Navbar({checkMenu,checkChild,handleCheckChild,handleCheckChild1,handleCheckMenu,handleCheckMenu1}) {
     const [classText,SetClassText] = useState('navbar__container')
     const handleShow =()=>{
         classText==='navbar__container'
@@ -32,100 +32,145 @@ function Navbar() {
         :
         SetClassText('navbar__container')
     }
+    
     return (
         <div className='navbar left'>
             <div className={classText} onMouseEnter={handleShow} onMouseLeave={handleShow}>
                 <ul className='navbar__icon'>
                     <li>
-                        <Link to="/">
+                        <Link to="/" onClick={handleCheckMenu1}>
                             <img src={logo_mini}></img>
                         </Link>
                     </li>
                     <li>
-                        <NavLink to="/" activeClassName="selected">
+                        <NavLink to="/" activeClassName="selected" onClick={handleCheckMenu1}>
                             <img src={home}></img>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/subjectManagement">
+                        <NavLink to="/subjectManagement" onClick={handleCheckMenu}>
                             <img src={book}></img>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/filePrivate">
+                        <NavLink to="/filePrivate" onClick={handleCheckMenu1}>
                             <img src={file}></img>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/examQuestions">
+                        <NavLink to="/examQuestions" onClick={handleCheckMenu1}>
                             <img src={bag}></img>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/notification">
+                        <NavLink to="/notification" onClick={handleCheckMenu1}>
                             <img src={bell}></img>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/settings">
+                        <NavLink to="/settings" onClick={handleCheckMenu1}>
                             <img src={settings}></img>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/help">
+                        <NavLink to="/help" onClick={handleCheckMenu1}>
                             <img src={comment}></img>
                         </NavLink>
                     </li>
                 </ul>
                 <ul className='navbar__text'>
                     <li>
-                        <NavLink to="/" activeClassName="selected">
+                        <NavLink to="/" activeClassName="selected" onClick={handleCheckMenu1}>
                             <img src={home1} className="img"></img>
                             <img src={home2} className="img1"></img>
                             <span>Trang chủ</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/subjectManagement">
+                        <NavLink to="/subjectManagement" onClick={handleCheckMenu}>
                             <img src={book1} className="img"></img>
                             <img src={book2} className="img1"></img>
                             <div className='navbar__text-group'>
                                 <span>Quản lý môn học</span>
-                                <span>Danh sách môn học</span>
-                                <span>Phê duyệt tài liệu môn học</span>
+                                <span
+                                onClick={handleCheckChild}
+                                style={
+                                        checkChild===0&&checkMenu
+                                        ?
+                                        {
+                                            fontWeight: '700',
+                                            fontSize: '16px',
+                                            lineHeight: '20px',
+                                            letterSpacing: '0.015em',
+                                            color: '#373839',opacity: '1'
+                                        }
+                                        :
+                                        {
+                                            fontWeight: '400',
+                                            fontSize: '16px',
+                                            lineHeight: '20px',
+                                            letterSpacing: '0.015em',
+                                            color: '#373839',
+                                            opacity: '0.4'
+                                        }
+                                    }
+                                >Danh sách môn học</span>
+                                <span
+                                onClick={handleCheckChild1}
+                                style={
+                                    checkChild===1&&checkMenu
+                                        ?
+                                        {
+                                            fontWeight: '700',
+                                            fontSize: '16px',
+                                            lineHeight: '20px',
+                                            letterSpacing: '0.015em',
+                                            color: '#373839',opacity: '1'
+                                        }
+                                        :
+                                        {
+                                            fontWeight: '400',
+                                            fontSize: '16px',
+                                            lineHeight: '20px',
+                                            letterSpacing: '0.015em',
+                                            color: '#373839',
+                                            opacity: '0.4'
+                                        }
+                                }
+                                >Phê duyệt tài liệu môn học</span>
                             </div>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/filePrivate">
+                        <NavLink to="/filePrivate" onClick={handleCheckMenu1}>
                             <img src={file1} className="img"></img>
                             <img src={file2} className="img1"></img>
                             <span>Tệp riêng tư</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/examQuestions">
+                        <NavLink to="/examQuestions" onClick={handleCheckMenu1}>
                             <img src={bag1} className="img"></img>
                             <img src={bag2} className="img1"></img>
                             <span>Ngân hàng đề thi</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/notification">
+                        <NavLink to="/notification" onClick={handleCheckMenu1}>
                             <img src={bell1} className="img"></img>
                             <img src={bell2} className="img1"></img>
                             <span>Thông báo</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/settings">
+                        <NavLink to="/settings" onClick={handleCheckMenu1}>
                             <img src={settings1} className="img"></img>
                             <img src={settings2} className="img1"></img>
                             <span>Cài đặt hệ thống</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/help">
+                        <NavLink to="/help" onClick={handleCheckMenu1}>
                             <img src={comment1} className="img"></img>
                             <img src={comment2} className="img1"></img>
                             <span>Trợ giúp</span>

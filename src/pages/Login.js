@@ -5,7 +5,7 @@ import logo from '../assets/logo.png'
 import passwordIcon from '../assets/passwordIcon.png'
 import userIcon from '../assets/userIcon.png'
 import '../sass/login.scss'
-function Login({handleLogin}) {
+function Login({handleCheckMenu,handleLogin}) {
     //kiem tra input user,password,code
     const [checkUser,setCheckUser] = useState('')
     const [checkPassword,setCheckPassword] = useState('')

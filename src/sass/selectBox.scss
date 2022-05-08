@@ -1,0 +1,35 @@
+.select{
+    position: relative;
+    display: inline-block;
+    & select{
+        height: 32px;
+        position: relative;
+        top:0;
+        left:0;
+        box-sizing: content-box;
+        appearance: none;
+        padding: 0 48px 0 8px;
+        z-index:10;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid #373839;
+        border-radius: 4px;
+        cursor: pointer;
+        
+    }
+    & img{
+        position: absolute;
+        top: 12%;
+        right: 2%;
+        z-index:1;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top:0;
+        right:32px;
+        width: 2px;
+        height: 100%;
+        background-color:  #C9C4C0;
+    }
+}

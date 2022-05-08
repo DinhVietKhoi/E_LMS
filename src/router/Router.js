@@ -8,13 +8,13 @@ import Notification from '../pages/Notification'
 import Settings from '../pages/Settings'
 import Help from '../pages/Help'
 import Account from '../pages/Account'
-function Router() {
+function Router({checkChild}) {
     //npm install react-router-dom@6
 
     return (
         <Routes> 
             <Route path="/" element={<Home />}></Route>
-            <Route path="/subjectManagement" element={<SubjectManagement />}></Route>
+            <Route path="/subjectManagement" element={<SubjectManagement checkChild={checkChild}/>}></Route>
             <Route path="/filePrivate" element={<FilePrivate />}></Route>
             <Route path="/examQuestions" element={<ExamQuestions />}></Route>
             <Route path="/notification" element={<Notification />}></Route>

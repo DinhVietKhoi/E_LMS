@@ -9,7 +9,9 @@ import img1 from '../assets/img1.png'
 import img2 from '../assets/img2.png'
 import img3 from '../assets/img3.png'
 import play from '../assets/play.png'
+import SelectBox from '../components/SelectBox'
 function Home() {
+  const arr = ['2016-2017','2017-2018','2018-2019','2019-2020','2020-2021']
   return (
     <div className='home'>
       <div className='home__container'>
@@ -19,15 +21,7 @@ function Home() {
         <div className='home__group'>
           <div className='home__school-year'>
             <span>Niên khóa</span>
-            <div className='home__select'>
-              <img src={down}></img>
-              <select >
-                <option value='1'>2020-2021</option>
-                <option value='2'>2020-2021</option>
-                <option value='3'>2020-2021</option>
-                <option value='4'>2020-2021</option>
-              </select>
-            </div>
+            <SelectBox arr={arr} value='2020-2021'/>
           </div>
           <div className='home__information'>
             <div className='home__information-box'>

@@ -13,6 +13,21 @@ function App() {
   const handleLogin = () =>{
     setCheckLogin(!checkLogin)
   }
+  //NAVBAR-Kiem tra nguoi dung click vao phan nao cua muc Quan Ly mon hoc
+  const [checkChild,setCheckChild] = useState(0)
+  const [checkMenu,setCheckMenu] = useState(false)
+  const handleCheckChild = ()=>{
+    setCheckChild(0)
+  }
+  const handleCheckChild1 = ()=>{
+      setCheckChild(1)
+  }
+  const handleCheckMenu = ()=>{
+    setCheckMenu(true)
+  }
+  const handleCheckMenu1 = ()=>{
+    setCheckMenu(false)
+  }
   return (
     <BrowserRouter>
         <div className="app">
@@ -20,13 +35,13 @@ function App() {
               !checkLogin&&<Login handleLogin={handleLogin}/>
             }
             {
-              checkLogin&&<Navbar />
+              checkLogin&&<Navbar checkMenu={checkMenu} checkChild={checkChild} handleCheckChild={handleCheckChild} handleCheckChild1={handleCheckChild1} handleCheckMenu={handleCheckMenu} handleCheckMenu1={handleCheckMenu1}/>
             }
             {
-              checkLogin&&<AccountIcon handleLogin={handleLogin}/>
+              checkLogin&&<AccountIcon handleCheckMenu={handleCheckMenu1} handleLogin={handleLogin}/>
             }
             {
-              checkLogin&&<Router />
+              checkLogin&&<Router checkMenu={checkMenu} checkChild={checkChild}/>
             }
         </div>
     </BrowserRouter>
